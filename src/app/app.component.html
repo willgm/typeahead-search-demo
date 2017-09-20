@@ -1,7 +1,7 @@
 <md-toolbar color="primary">My App</md-toolbar>
 <md-form-field class="full-width">
-  <input mdInput type="text">
+  <input mdInput type="text" [formControl]="myInput">
 </md-form-field>
-<md-card *ngFor="let r of results">
+<md-card *ngFor="let r of results | async">
    {{r.name}}
 </md-card>
